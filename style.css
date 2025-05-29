@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+#form-nueva-obra, #lista-obras {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#form-nueva-obra h2, #lista-obras h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+}
+
+#form-nueva-obra h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    color: #0056b3;
+}
+#form-nueva-obra h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#nuevaObraForm div, #nuevaObraForm fieldset {
+    margin-bottom: 15px;
+}
+
+#nuevaObraForm fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#nuevaObraForm legend {
+    font-weight: bold;
+    color: #333;
+    padding: 0 5px;
+}
+
+#nuevaObraForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#nuevaObraForm input[type="text"],
+#nuevaObraForm input[type="date"],
+#nuevaObraForm input[type="number"],
+#nuevaObraForm input[type="email"],
+#nuevaObraForm input[type="tel"],
+#nuevaObraForm textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#nuevaObraForm select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: .65em auto;
+    padding-right: 30px; 
+}
+
+#nuevaObraForm textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+#nuevaObraForm button[type="submit"],
+#nuevaObraForm button[type="button"] {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#nuevaObraForm button[type="submit"]:hover {
+    background: #4cae4c;
+}
+
+#nuevaObraForm button.btn-secondary {
+    background-color: #6c757d;
+}
+#nuevaObraForm button.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.contact-info-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.contact-info-group > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.actividad-row {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.actividad-row h5 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.actividad-field-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.actividad-field-group > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.actividad-field-group label {
+    font-size: 0.9em;
+    margin-bottom: 3px;
+}
+
+.actividad-row input[type="text"],
+.actividad-row input[type="number"] {
+    width: calc(100% - 12px);
+    padding: 8px;
+}
+
+.btn-eliminar-actividad {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+.btn-eliminar-actividad:hover {
+    background-color: #c82333;
+}
+
+.obras-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.obra-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.obra-card h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.obra-card h4 {
+    font-size: 1.1em;
+    color: #0056b3;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.obra-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.obra-card p strong {
+    color: #555;
+}
+
+.obra-card .info-item {
+    margin-bottom: 8px;
+}
+
+.obra-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.obra-card li {
+    margin-bottom: 5px;
+}
+
+.obra-card .actions {
+    margin-top: auto; 
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+}
+
+.obra-card .actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.obra-card .actions .btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+}
+.obra-card .actions .btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+    background: #333;
+    color: #fff;
+}

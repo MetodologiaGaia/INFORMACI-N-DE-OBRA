@@ -1,0 +1,163 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Obras de Construcción</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+        "imports": {
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Gestor de Obras de Construcción</h1>
+    </header>
+
+    <main>
+        <section id="form-nueva-obra">
+            <h2>Registrar Nueva Obra</h2>
+            <form id="nuevaObraForm">
+                
+                <h3>INFORMACIÓN GENERAL DE OBRA</h3>
+                <div>
+                    <label for="constructora">CONSTRUCTORA:</label>
+                    <input type="text" id="constructora" name="constructora" required>
+                </div>
+                <div>
+                    <label for="nombreObra">OBRA (Nombre del Proyecto):</label>
+                    <input type="text" id="nombreObra" name="nombreObra" required>
+                </div>
+                <div>
+                    <label for="direccionObra">DIRECCIÓN:</label>
+                    <input type="text" id="direccionObra" name="direccionObra">
+                </div>
+                <div>
+                    <label for="supervisorObra">SUPERVISOR:</label>
+                    <input type="text" id="supervisorObra" name="supervisorObra">
+                </div>
+                <fieldset>
+                    <legend>CORTES (Fechas)</legend>
+                    <div>
+                        <label for="fechaCorteInicio">Fecha de Corte Inicio:</label>
+                        <input type="date" id="fechaCorteInicio" name="fechaCorteInicio">
+                    </div>
+                    <div>
+                        <label for="fechaCorteFin">Fecha de Corte Fin:</label>
+                        <input type="date" id="fechaCorteFin" name="fechaCorteFin">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>DIRECTOR DE OBRA</legend>
+                    <div class="contact-info-group">
+                        <div>
+                            <label for="directorNombre">Nombre:</label>
+                            <input type="text" id="directorNombre" name="directorNombre">
+                        </div>
+                        <div>
+                            <label for="directorCelular">Celular:</label>
+                            <input type="tel" id="directorCelular" name="directorCelular">
+                        </div>
+                        <div>
+                            <label for="directorCorreo">Correo:</label>
+                            <input type="email" id="directorCorreo" name="directorCorreo">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>RESIDENTE DE OBRA</legend>
+                    <div class="contact-info-group">
+                        <div>
+                            <label for="residenteNombre">Nombre:</label>
+                            <input type="text" id="residenteNombre" name="residenteNombre">
+                        </div>
+                        <div>
+                            <label for="residenteCelular">Celular:</label>
+                            <input type="tel" id="residenteCelular" name="residenteCelular">
+                        </div>
+                        <div>
+                            <label for="residenteCorreo">Correo:</label>
+                            <input type="email" id="residenteCorreo" name="residenteCorreo">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>MAESTRO DE OBRA</legend>
+                    <div class="contact-info-group">
+                        <div>
+                            <label for="maestroNombre">Nombre:</label>
+                            <input type="text" id="maestroNombre" name="maestroNombre">
+                        </div>
+                        <div>
+                            <label for="maestroCelular">Celular:</label>
+                            <input type="tel" id="maestroCelular" name="maestroCelular">
+                        </div>
+                        <div>
+                            <label for="maestroCorreo">Correo:</label>
+                            <input type="email" id="maestroCorreo" name="maestroCorreo">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>SISO (Seguridad Industrial y Salud Ocupacional)</legend>
+                    <div class="contact-info-group">
+                        <div>
+                            <label for="sisoNombre">Nombre:</label>
+                            <input type="text" id="sisoNombre" name="sisoNombre">
+                        </div>
+                        <div>
+                            <label for="sisoCelular">Celular:</label>
+                            <input type="tel" id="sisoCelular" name="sisoCelular">
+                        </div>
+                        <div>
+                            <label for="sisoCorreo">Correo:</label>
+                            <input type="email" id="sisoCorreo" name="sisoCorreo">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <h3>INFORMACIÓN DE CONTRATOS</h3>
+                <div>
+                    <label for="contratoNumero">CONTRATO N°:</label>
+                    <input type="text" id="contratoNumero" name="contratoNumero" required>
+                </div>
+                <div>
+                    <label for="contratoFechaInicio">INICIO (Fecha Contrato):</label>
+                    <input type="date" id="contratoFechaInicio" name="contratoFechaInicio" required>
+                </div>
+                <div>
+                    <label for="contratoFechaFinal">FINAL (Fecha Contrato):</label>
+                    <input type="date" id="contratoFechaFinal" name="contratoFechaFinal">
+                </div>
+
+                <h4>ACTIVIDADES DEL CONTRATO</h4>
+                <div id="actividadesContainer">
+                    <!-- Las actividades se agregarán aquí dinámicamente -->
+                </div>
+                <button type="button" id="addActividadBtn" class="btn-secondary">Añadir Actividad</button>
+                
+                <button type="submit" style="margin-top: 20px;">Agregar Obra</button>
+            </form>
+        </section>
+
+        <section id="lista-obras">
+            <h2>Obras Registradas</h2>
+            <div id="obrasContainer" class="obras-container">
+                <!-- Las obras se cargarán aquí -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gestor de Obras</p>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
